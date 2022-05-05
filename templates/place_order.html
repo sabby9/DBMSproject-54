@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> products </title>
+</head>
+PID &emsp;  NAME &emsp;    COST  &emsp; MANUFACTURE DATE &emsp;   QUANTITY WANTED<br>
+<body style="background-color:#B9B8FF;"></body>
+<body>
+    <form action="http://127.0.0.1:5000/customer/place_order", method="POST",style="margin: auto; width: 220px; padding-top: 50px;">
+    {% for user in data  %}
+  {% for i in user %}
+    {{i}} &emsp; &emsp;
+   
+  {% endfor %}  &emsp;&emsp; <input type="text" id="quantity"  name="quantity", value="0"> <br> 
+{% endfor %}
+
+
+     INPUT PAYMENT TYPE:
+     OPTIONS AVAILABLE: CASH ON DELIVERY/NET BANKING/CARD
+     OPTIONS AVAILABLE CODE: COD/NB/CARD 
+     Note: for orders with total>5000 COD is not available
+    <input type="text" id="payment_type"  name="payment_type", value="ENTER TYPE HERE" required> <br>
+    <input type="submit" value="Submit">
+  
+  </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>past orders</title>
+</head>
+<body style="background-color:#B9B8FF;"></body>
+<body>
+{% for user in data  %}
+  {% for i in user %}
+    {{i}}
+   
+  {% endfor %} <br> <br>
+{% endfor %}
+   
+
+<form action="http://127.0.0.1:5000/customer/past_orders", method="POST", style="margin: auto; width: 220px; padding-top: 50px;">
+     
+    <label for="orderid">Enter order id whose detail you wish to see:</label><br>
+    <input type="text" id="orderid" name="orderid"><br>
+    <input type="submit" value="Submit">
+  
+  </form>
+
+
+</body>
+</html>
